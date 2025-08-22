@@ -1,14 +1,18 @@
 # EmailWeb
 
-EmailWeb là ứng dụng web Java chạy trên Tomcat, sử dụng Maven để build và triển khai trên Render.
+**EmailWeb** là ứng dụng web Java chạy trên Tomcat, sử dụng Maven để build và triển khai trên Render.
+
+---
 
 ## 🚀 Giới thiệu
 
 Ứng dụng cho phép người dùng:
 
-- Gửi email với họ tên
-- Quản lý danh sách liên lạc.
+- Gửi email với họ tên.  
+- Quản lý danh sách liên lạc.  
 - Chạy trực tiếp trên Tomcat hoặc Render.
+
+---
 
 ## 🛠️ Công nghệ
 
@@ -17,63 +21,55 @@ EmailWeb là ứng dụng web Java chạy trên Tomcat, sử dụng Maven để 
 - **Server**: Tomcat 11  
 - **Triển khai**: Render  
 
+---
+
 ## 📦 Quickstart
 
-### 1. Build ứng dụng
+### 1. Build ứng dụng (local)
 
-Trên máy local:
 
 mvn clean package
-
 Lệnh này sẽ tạo ra tệp target/emailweb.war.
-
 
 2. Push lên GitHub
 git add .
 git commit -m "Build package"
 git push origin main
-
 3. Triển khai trên Render
+Đăng nhập Render → chọn New Web Service
 
-Đăng nhập Render
- → chọn New Web Service.
+Kết nối repository emailweb
 
-Kết nối repository emailweb.
+Chọn Language: Docker
 
-Chọn Language: Docker.
+Chọn Region: Singapore
 
-Chọn Region: Singapore.
-
-Trong Environment Variables, thêm:
+Thêm Environment Variable:
 
 PORT=8080
-
 
 Build Command:
 
 mvn clean package
+Start Command: triển khai WAR trên Tomcat hoặc Docker container
 
-
-Start Command: triển khai WAR trên Tomcat hoặc Docker container.
-
-Render sẽ tự động build và deploy ứng dụng. Truy cập qua URL do Render cung cấp.
+Render sẽ tự động build và deploy ứng dụng. Truy cập ứng dụng qua URL Render cung cấp.
 
 4. Truy cập ứng dụng
-
 Render: URL hiển thị trên dashboard Render
 
 🧪 Kiểm thử
-
 Ứng dụng đã được kiểm thử với các trường hợp:
 
-Gửi email đơn giản.
+Gửi email đơn giản
 
-Gửi email với tệp đính kèm.
-
-Quản lý danh bạ.
+Quản lý danh bạ
 
 📞 Liên hệ
-
 GitHub: https://github.com/Baopham1607
 
 Email: baopham1607@example.com
+
+markdown
+Sao chép
+Chỉnh sửa
