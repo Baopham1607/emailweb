@@ -1,9 +1,11 @@
-package murach;
+package murach.email;
 
 import java.io.*;
 import jakarta.servlet.*;          // sửa javax → jakarta
 import jakarta.servlet.http.*;    // sửa javax → jakarta
 
+import murach.business.User;
+import murach.data.UserDB;
 
 public class EmailListServlet extends HttpServlet {
     @Override
