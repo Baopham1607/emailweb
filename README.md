@@ -23,7 +23,7 @@ EmailWeb là ứng dụng web Java chạy trên Tomcat, sử dụng Maven để 
 
 Trên máy local:
 
-```bash
+bash
 mvn clean package
 Lệnh này sẽ tạo ra tệp target/emailweb.war.
 
