@@ -1,56 +1,65 @@
 # EmailWeb
 
-EmailWeb là một ứng dụng web được xây dựng bằng Java, sử dụng Spring Boot để gửi và nhận email thông qua giao diện người dùng đơn giản.
+EmailWeb là ứng dụng web Java chạy trên Tomcat, sử dụng Maven để build và triển khai trên Render.
 
 ## 🚀 Giới thiệu
 
 Ứng dụng cho phép người dùng:
 
-- Gửi email với nội dung và đính kèm.
+- Gửi email với nội dung và tệp đính kèm.
 - Quản lý danh sách liên lạc.
-- Tích hợp với hệ thống email phổ biến như Gmail, Outlook.
+- Chạy trực tiếp trên Tomcat hoặc Render.
 
-## 🛠️ Công nghệ sử dụng
+## 🛠️ Công nghệ
 
-- **Backend**: Java, Spring Boot
-- **Frontend**: HTML, CSS
-- **Container**: Docker (có sẵn Dockerfile)
-- **Quản lý phụ thuộc**: Maven (pom.xml)
+- **Java**: JDK 17  
+- **Build**: Maven 3.9.11  
+- **Server**: Tomcat 11  
+- **Triển khai**: Render  
 
-## 📦 Cài đặt và chạy ứng dụng
+## 📦 Quickstart
 
-### 1. Cài đặt yêu cầu
+### 1. Build ứng dụng
 
-- Java 11 trở lên
-- Maven
-- Docker (nếu muốn chạy trong container)
+Trên máy local:
 
-### 2. Cấu hình ứng dụng
+```bash
+mvn clean package
+Lệnh này sẽ tạo ra tệp target/emailweb.war.
 
-- Mở `src/main/resources/application.properties` và cấu hình các thông số sau:
+2. Push lên GitHub
+git add .
+git commit -m "Build package"
+git push origin main
 
-  ```properties
-  spring.mail.host=smtp.gmail.com
-  spring.mail.port=587
-  spring.mail.username=your-email@gmail.com
-  spring.mail.password=your-email-password
+3. Triển khai trên Render
+
+Đăng nhập Render
+ → chọn New Web Service.
+
+Kết nối repository emailweb.
+
+Chọn Language: Docker.
+
+Chọn Region: Singapore.
+
+Trong Environment Variables, thêm:
+
+PORT=8080
 
 
-3. Chạy ứng dụng
+Build Command:
 
-Sử dụng Maven:
-
-mvn spring-boot:run
+mvn clean package
 
 
-Sử dụng Docker:
+Start Command: triển khai WAR trên Tomcat hoặc Docker container.
 
-docker build -t emailweb .
-docker run -p 8080:8080 emailweb
+Render sẽ tự động build và deploy ứng dụng. Truy cập qua URL do Render cung cấp.
 
 4. Truy cập ứng dụng
 
-Mở trình duyệt và truy cập: http://localhost:8080
+Render: URL hiển thị trên dashboard Render
 
 🧪 Kiểm thử
 
@@ -61,11 +70,6 @@ Gửi email đơn giản.
 Gửi email với tệp đính kèm.
 
 Quản lý danh bạ.
-
-📄 Giấy phép
-
-Đây là dự án mã nguồn mở, được cấp phép theo MIT License
-.
 
 📞 Liên hệ
 
