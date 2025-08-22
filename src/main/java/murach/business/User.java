@@ -8,9 +8,9 @@ public class User implements Serializable {
     private String email;
 
     public User() {
-        firstName = "";
-        lastName = "";
-        email = "";
+        this.firstName = "";
+        this.lastName = "";
+        this.email = "";
     }
 
     public User(String firstName, String lastName, String email) {
@@ -18,6 +18,7 @@ public class User implements Serializable {
         this.lastName = lastName;
         this.email = email;
     }
+
     public String getFirstName() {
         return firstName;
     }

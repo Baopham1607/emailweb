@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>EmailListServlet</servlet-name>
-        <servlet-class>EmailListServlet</servlet-class>
+        <servlet-class>murach.email.EmailListServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
