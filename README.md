@@ -6,7 +6,7 @@ EmailWeb là ứng dụng web Java chạy trên Tomcat, sử dụng Maven để 
 
 Ứng dụng cho phép người dùng:
 
-- Gửi email với nội dung và tệp đính kèm.
+- Gửi email với họ tên
 - Quản lý danh sách liên lạc.
 - Chạy trực tiếp trên Tomcat hoặc Render.
 
