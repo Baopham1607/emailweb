@@ -31,11 +31,11 @@
 mvn clean package
 Lệnh này sẽ tạo ra tệp target/emailweb.war.
 
-2. Push lên GitHub
+### 2. Push lên github
 git add .
 git commit -m "Build package"
 git push origin main
-3. Triển khai trên Render
+### 3. Triển khai trên Render
 Đăng nhập Render → chọn New Web Service
 
 Kết nối repository emailweb
@@ -55,10 +55,11 @@ Start Command: triển khai WAR trên Tomcat hoặc Docker container
 
 Render sẽ tự động build và deploy ứng dụng. Truy cập ứng dụng qua URL Render cung cấp.
 
-4. Truy cập ứng dụng
+### 4. Truy cập web
 Render: URL hiển thị trên dashboard Render
 
 🧪 Kiểm thử
+
 Ứng dụng đã được kiểm thử với các trường hợp:
 
 Gửi email đơn giản
@@ -70,6 +71,3 @@ GitHub: https://github.com/Baopham1607
 
 Email: baopham1607@example.com
 
-markdown
-Sao chép
-Chỉnh sửa
