@@ -1,4 +1,4 @@
-package murach.business;
+package murach;
 
 import java.io.Serializable;
 
