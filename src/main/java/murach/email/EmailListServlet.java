@@ -1,11 +1,12 @@
 package murach.email;
 
-import java.io.*;
-import jakarta.servlet.*;          // sửa javax → jakarta
-import jakarta.servlet.http.*;    // sửa javax → jakarta
+import java.io.IOException;
 
+import jakarta.servlet.ServletException;          // sửa javax → jakarta
+import jakarta.servlet.http.HttpServlet;    // sửa javax → jakarta
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import murach.business.User;
-import murach.data.UserDB;
 
 public class EmailListServlet extends HttpServlet {
     @Override
