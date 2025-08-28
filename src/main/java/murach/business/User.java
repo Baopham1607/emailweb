@@ -6,29 +6,18 @@ public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
-    private String dateOfBirth;
-    private String contactMethod;
-    private String[] announcements; // Dùng mảng để lưu nhiều tùy chọn
 
     public User() {
         this.firstName = "";
         this.lastName = "";
         this.email = "";
-        this.dateOfBirth = "";
-        this.contactMethod = "";
-        this.announcements = new String[0];
     }
 
-    public User(String firstName, String lastName, String email, String dateOfBirth, String contactMethod, String[] announcements) {
+    public User(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.dateOfBirth = dateOfBirth;
-        this.contactMethod = contactMethod;
-        this.announcements = announcements;
     }
-
-    // Getters and setters for all properties
 
     public String getFirstName() {
         return firstName;
@@ -52,31 +41,5 @@ public class User implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-    
-    // Getters and setters for new properties
-
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public String getContactMethod() {
-        return contactMethod;
-    }
-
-    public void setContactMethod(String contactMethod) {
-        this.contactMethod = contactMethod;
-    }
-
-    public String[] getAnnouncements() {
-        return announcements;
-    }
-
-    public void setAnnouncements(String[] announcements) {
-        this.announcements = announcements;
     }
 }

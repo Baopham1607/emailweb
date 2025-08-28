@@ -6,13 +6,13 @@
                         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
 
     <servlet>
-        <servlet-name>SurveyServlet</servlet-name>
+        <servlet-name>EmailListServlet</servlet-name>
         <servlet-class>murach.email.EmailListServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>SurveyServlet</servlet-name>
-        <url-pattern>/survey</url-pattern>
+        <servlet-name>EmailListServlet</servlet-name>
+        <url-pattern>/emailList</url-pattern>
     </servlet-mapping>
 
     <session-config>
