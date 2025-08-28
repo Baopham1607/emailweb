@@ -2,8 +2,8 @@ package murach.email;
 
 import java.io.IOException;
 
-import jakarta.servlet.ServletException;          // sửa javax → jakarta
-import jakarta.servlet.http.HttpServlet;    // sửa javax → jakarta
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import murach.business.User;
@@ -15,6 +15,7 @@ public class EmailListServlet extends HttpServlet {
             throws ServletException, IOException {
 
         String url = "/index.html";
+        request.setCharacterEncoding("UTF-8");
 
         String action = request.getParameter("action");
         if (action == null) {
@@ -24,12 +25,18 @@ public class EmailListServlet extends HttpServlet {
         if (action.equals("join")) {
             url = "/index.html";
         } else if (action.equals("add")) {
+            // Lấy các tham số từ request
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
+            String dateOfBirth = request.getParameter("dob");
+            String contactMethod = request.getParameter("contactMethod");
+            String[] announcements = request.getParameterValues("announcements");
 
-            User user = new User(firstName, lastName, email);
+            // Tạo đối tượng User với tất cả các thuộc tính mới
+            User user = new User(firstName, lastName, email, dateOfBirth, contactMethod, announcements);
 
+            // Lưu đối tượng User vào request scope
             request.setAttribute("user", user);
             url = "/thanks.jsp";
         }
